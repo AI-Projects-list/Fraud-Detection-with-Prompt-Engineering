@@ -4,6 +4,7 @@ import openai
 import csv
 import os
 
+openai.api_key = os.getenv("OPENAI_API_KEY")
 def rule_based_check(description):
     desc = description.lower()
     if "withdrawal of $10,000" in desc and "2 am" in desc and "different country" in desc:
